@@ -19,6 +19,11 @@
 </script>
 
 {#if $currentUser}
+
+   <NavLink
+    on:click={() => navigate('/profile')}
+    icon={faUserPlus}
+    label="Profile" />
   <NavLink
     on:click={() => navigate('/')}
     icon={faChartLine}

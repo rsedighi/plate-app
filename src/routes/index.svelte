@@ -9,6 +9,7 @@
   import PlateDetails from './PlateDetails/index.svelte';
   import Login from './Login/index.svelte';
   import Register from './Register/index.svelte';
+  import Profile from './Profile/index.svelte';
 
   let pageProps = {
     component: Dashboard,
@@ -47,6 +48,18 @@
       };
     }
   });
+
+  page('/profile', () => {
+    if ($currentUser) {
+      pageProps = {
+        component: Profile,
+        layout: DefaultLayout,
+      };
+    } else {
+      page.redirect('/login');
+    }
+  });
+
 
   page('/create-plate', () => {
     if ($currentUser) {
