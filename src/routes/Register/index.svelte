@@ -93,7 +93,7 @@
           hasError={errors.firstName}
           on:change={handleChange} />
       </div>
-      <div class="w-full md:w-1/2 md:pl-2">
+      <div class="w-full md:w-1/2 md:pr-2">
         <Input
           isFormField
           type="text"
