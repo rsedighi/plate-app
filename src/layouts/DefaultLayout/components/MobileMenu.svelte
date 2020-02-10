@@ -76,6 +76,10 @@
             icon={faChartLine}
             label={$_('defaultLayout.dashboardLink')} />
           <NavLink
+            on:click={() => navigate('/profile')}
+            icon={faChartLine}
+            label={$_('Profile')} />
+          <NavLink
             isMobile
             on:click={handleLogout}
             icon={faSignInAlt}

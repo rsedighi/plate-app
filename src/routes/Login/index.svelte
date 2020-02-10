@@ -73,6 +73,7 @@
       placeholder={$_('login.password')}
       hasError={passwordError}
       on:change={handleChange} />
+    <!-- fullwidth with nothing here equals true -->
     <Button type="submit" fullWidth loading={submitting}>
       {$_('login.submitText')}
     </Button>

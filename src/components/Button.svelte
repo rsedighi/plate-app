@@ -6,7 +6,7 @@
   let classes = '';
 
   $: classes =
-    'rounded px-4 md:px-5 xl:px-4 py-3 bg-gray-700 hover:bg-gray-800 text-lg uppercase xl:text-base text-white flex justify-center items-center flex-row font-semibold leading-tight shadow-md ' +
+    'rounded w-full py-3 bg-gray-700 hover:bg-gray-800 text-lg uppercase xl:text-base text-white flex justify-center items-center flex-row font-semibold leading-tight shadow-md ' +
     ($$props.class ? $$props.class : '');
 </script>
 
@@ -37,6 +37,7 @@
   }
 </style>
 
+<!-- :w-full is conditionally setting tailwind, if fullwidth is true, do w-full -->
 <button {type} on:click class:w-full={fullWidth} class={classes}>
   {#if loading}
     <div class="spinner" />

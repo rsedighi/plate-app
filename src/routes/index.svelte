@@ -2,7 +2,7 @@
   import page from 'page';
 
   import { currentUser } from '../store/auth';
-
+  import Profile from './Profile/index.svelte';
   import Dashboard from './Dashboard/index.svelte';
   import DefaultLayout from '../layouts/DefaultLayout/index.svelte';
   import PlateCreator from './PlateCreator/index.svelte';
@@ -53,6 +53,17 @@
     if ($currentUser) {
       pageProps = {
         component: PlateCreator,
+        layout: DefaultLayout,
+      };
+    } else {
+      page.redirect('/login');
+    }
+  });
+
+  page('/profile', () => {
+    if ($currentUser) {
+      pageProps = {
+        component: Profile,
         layout: DefaultLayout,
       };
     } else {
